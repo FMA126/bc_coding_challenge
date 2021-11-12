@@ -6,6 +6,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ReservationFormComponent } from './reservation-form/reservation-form.component';
+import { CustomerComponent } from './customer/customer.component';
+import { CustomerProfileComponent } from './customer-profile/customer-profile.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
@@ -14,9 +17,11 @@ import { MatSelectModule } from '@angular/material/select'
 import { MatButtonModule } from '@angular/material/button';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import { CustomerComponent } from './customer/customer.component';
-import { CustomerProfileComponent } from './customer-profile/customer-profile.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { MatTableModule } from '@angular/material/table';
+import { TableComponent } from './table/table.component';
+
+import { MatSortModule } from '@angular/material/sort';
+
 
 
 
@@ -27,6 +32,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     CustomerComponent,
     CustomerProfileComponent,
     DashboardComponent,
+    TableComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,11 +46,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatButtonModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatTableModule,
+    MatSortModule
   ],
   providers: [
     { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
     MatNativeDateModule,
-    MatDatepickerModule
+    MatDatepickerModule,
   ],
   bootstrap: [AppComponent],
 })

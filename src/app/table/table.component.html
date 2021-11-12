@@ -1,0 +1,69 @@
+<table mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)"
+    class="mat-elevation-z8">
+
+  <ng-container matColumnDef="customer_id">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by customer_id">
+      No.
+    </th>
+    <td mat-cell *matCellDef="let customer"> {{customer.customer_id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="first_name">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by first_name">
+      Fist Name
+    </th>
+    <td mat-cell *matCellDef="let customer"> {{customer.first_name}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="last_name">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by last_name">
+      Last Name
+    </th>
+    <td mat-cell *matCellDef="let customer"> {{customer.last_name}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="phone">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by phone">
+      Phone
+    </th>
+    <td mat-cell *matCellDef="let customer"> {{customer.phone}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="year">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by year">
+      Year
+    </th>
+    <td mat-cell *matCellDef="let customer"> {{customer.year}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="make">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by make">
+      Make
+    </th>
+    <td mat-cell *matCellDef="let customer"> {{customer.make}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="model">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by model">
+      Model
+    </th>
+    <td mat-cell *matCellDef="let customer"> {{customer.model}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="date">
+    <th mat-header-cell *matHeaderCellDef>
+      Date
+    </th>
+    <td mat-cell *matCellDef="let customer"> {{customer.date}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="time">
+    <th mat-header-cell *matHeaderCellDef>
+      Time
+    </th>
+    <td mat-cell *matCellDef="let customer"> {{customer.time}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
