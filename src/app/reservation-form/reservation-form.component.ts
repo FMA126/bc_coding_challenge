@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
+
+import { MOCK_DATA, Customer } from 'src/mock-data/mock-data';
 
 @Component({
   selector: 'app-reservation-form',
@@ -33,9 +36,14 @@ export class ReservationFormComponent implements OnInit {
     })
   });
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+
+    const cust = CUSTOMER_DATA.find(el => el.customer_id = this.route.snapshot.url[1]?.path)
+    // if (cust) {
+    // this.customerForm.patchValue({})
+    // }
   }
 
   onSubmit(): void {
@@ -45,3 +53,5 @@ export class ReservationFormComponent implements OnInit {
   }
 
 }
+
+const CUSTOMER_DATA: Customer[] = MOCK_DATA;

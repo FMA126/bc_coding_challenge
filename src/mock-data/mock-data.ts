@@ -95,7 +95,7 @@ export const MOCK_DATA = [
         first_name: "Odessa",
         last_name: "Cantu",
         email: "ut@hotmail.edu",
-        phone: "1-151-155-9674",
+        phone: "(512) 155-9674",
         address: "400-6447 Dolor Ave",
         city: "Kano",
         state: "Khyber Pakhtoonkhwa",
