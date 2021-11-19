@@ -35,8 +35,7 @@ export class TableComponent implements AfterViewInit {
   }
 
   onClick(row: any) {
-    console.log(row)
-    this.router.navigate([`/customer/${row.customer_id}`])
+    this.router.navigate([`/customers/${row.customer_id}`])
   }
 }
 

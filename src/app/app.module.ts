@@ -21,6 +21,7 @@ import { MatTableModule } from '@angular/material/table';
 import { TableComponent } from './table/table.component';
 
 import { MatSortModule } from '@angular/material/sort';
+import { CreateCustomerComponent } from './create-customer/create-customer.component';
 
 
 
@@ -33,6 +34,7 @@ import { MatSortModule } from '@angular/material/sort';
     CustomerProfileComponent,
     DashboardComponent,
     TableComponent,
+    CreateCustomerComponent,
   ],
   imports: [
     BrowserModule,
